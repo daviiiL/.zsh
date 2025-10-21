@@ -1,0 +1,3 @@
+[submodule "framework/zgenom"]
+	path = framework/zgenom
+	url = https://github.com/jandamm/zgenom.git
