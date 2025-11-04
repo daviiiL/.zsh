@@ -87,7 +87,12 @@ fi
 if [ ! -f "$ZSH_DIR/framework/zgenom/zgenom.zsh" ]; then
   echo "Initializing zgenom submodule..."
   cd "$ZSH_DIR"
-  git submodule update --init --recursive
+  git submodule update --init --recursive --remote
+
+  # Ensure submodule is on the main branch, not detached HEAD
+  cd "$ZSH_DIR/framework/zgenom"
+  git checkout main
+  cd "$ZSH_DIR"
 fi
 
 echo ""
