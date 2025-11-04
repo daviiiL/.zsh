@@ -1,44 +1,22 @@
-# Zsh Configuration
+# daviiiL's ZSH config primarily for my macs
 
-Modular zsh configuration with zgenom plugin management.
+> will started to integrate my linux zsh dotfile with this one as well... darwin systems for now
 
-## Installation
+## basic stuff
 
-```bash
-git clone <repo-url> ~/.zsh
-cd ~/.zsh
-git submodule update --init --recursive
-```
+```sh
+# Put it wherever you like
+zsh_config_dir="$HOME/.zsh"
 
-Add to `~/.zshrc`:
-```bash
-source ~/.zsh/init.zsh
-```
+# Clone the config into that directory
+git clone https://github.com/daviiiL/.zsh "$zsh_config_dir"
 
-## Structure
+# Source the config
+echo "source \"$zsh_config_dir/init.zsh\"" >> "$HOME/.zshrc"
 
-```
-~/.zsh/
-├── init.zsh         # Main entry point
-├── setup.sh         # First-time setup
-├── options.zsh      # Shell options
-├── plugins.zsh      # Plugin management
-├── lib/            # Helper functions
-├── env/            # Environment variables
-├── aliases/        # Command aliases
-├── functions/      # Custom functions
-├── completions/    # Custom completions
-└── framework/      # zgenom
-```
+# Optionally make sure the setup script is executable
+# chmod +x "$zsh_config_dir/setup.sh"
 
-## Usage
-
-Add files to:
-- `env/` for environment variables
-- `aliases/` for command aliases
-- `functions/` for shell functions
-
-Update plugins in `plugins.zsh`, then run:
-```bash
-zgenom reset
+# Reload your zsh configuration
+source "$HOME/.zshrc"
 ```
