@@ -34,7 +34,7 @@ for plugin_file in ~/.zsh/plugins/*.zsh; do
   [ -r "$plugin_file" ] && source "$plugin_file"
 done
 
-# Load finalize files last (commands, overrides)
-for finalize_file in ~/.zsh/finalize/*.zsh; do
+# Load post-init files last (commands, overrides)
+for finalize_file in ~/.zsh/post-init/*.zsh; do
   [ -r "$finalize_file" ] && source "$finalize_file"
 done
