@@ -1,4 +1,3 @@
-# Node.js/NVM configuration
 export NVM_DIR="$HOME/.nvm"
 
 if [ -s "/opt/homebrew/opt/nvm/nvm.sh" ]; then
