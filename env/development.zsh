@@ -37,3 +37,8 @@ elif [[ -d "/opt/homebrew/opt/gradle@7/bin" ]]; then
   export PATH="/opt/homebrew/opt/gradle@7/bin:$PATH"
   config_success "development" "Added Gradle 7 to PATH (Homebrew)"
 fi
+
+if [[ -d "/opt/homebrew/lib/ruby/gems/3.4.0/bin" ]]; then
+  export PATH="/opt/homebrew/lib/ruby/gems/3.4.0/bin:$PATH"
+  config_success "development" "Added Ruby gems to PATH (CocoaPods)"
+fi
