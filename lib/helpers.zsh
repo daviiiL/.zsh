@@ -28,3 +28,23 @@ config_command_exists() {
 config_path_exists() {
   [[ -e "$1" ]]
 }
+
+is_macos() {
+  [[ "$OSTYPE" == darwin* ]]
+}
+
+is_linux() {
+  [[ "$OSTYPE" == linux* ]]
+}
+
+is_arch() {
+  [[ -f /etc/arch-release ]] || [[ -f /etc/cachyos-release ]] || command -v pacman &>/dev/null
+}
+
+is_debian() {
+  [[ -f /etc/debian_version ]] || command -v apt &>/dev/null
+}
+
+is_fedora() {
+  [[ -f /etc/fedora-release ]] || command -v dnf &>/dev/null
+}

@@ -6,7 +6,7 @@ fi
 source ~/.zsh/lib/helpers.zsh
 source ~/.zsh/options.zsh
 
-[ -f ~/.zsh/env/homebrew.zsh ] && source ~/.zsh/env/homebrew.zsh
+[[ "$OSTYPE" == darwin* ]] && [ -f ~/.zsh/env/homebrew.zsh ] && source ~/.zsh/env/homebrew.zsh
 [ -f ~/.zsh/env/python.zsh ] && source ~/.zsh/env/python.zsh
 [ -f ~/.zsh/env/node.zsh ] && source ~/.zsh/env/node.zsh
 [ -f ~/.zsh/env/development.zsh ] && source ~/.zsh/env/development.zsh
