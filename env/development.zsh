@@ -42,3 +42,8 @@ if [[ -d "/opt/homebrew/lib/ruby/gems/3.4.0/bin" ]]; then
   export PATH="/opt/homebrew/lib/ruby/gems/3.4.0/bin:$PATH"
   config_success "development" "Added Ruby gems to PATH (CocoaPods)"
 fi
+
+if [[ -d "$HOME/.local/bin" ]]; then
+  export PATH="$HOME/.local/bin:$PATH"
+  config_success "development" "Added .local/bin to PATH"
+fi 
