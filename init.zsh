@@ -19,7 +19,6 @@ for alias_file in ~/.zsh/aliases/*.zsh(N); do
   [ -r "$alias_file" ] && source "$alias_file"
 done
 
-# Custom functions and completions 
 for function_file in ~/.zsh/functions/*.zsh(N); do
   [ -r "$function_file" ] && source "$function_file"
 done
