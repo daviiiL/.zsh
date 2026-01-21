@@ -1,4 +1,6 @@
 export NVM_DIR="$HOME/.nvm"
+export NODE_VERSIONS="$HOME/.nvm/versions/node"
+export NODE_VERSION_PREFIX=v
 
 if command -v brew >/dev/null 2>&1 && [ -s "/opt/homebrew/opt/nvm/nvm.sh" ]; then
   \. "/opt/homebrew/opt/nvm/nvm.sh"
